@@ -1,17 +1,3 @@
-# test
-from serpapi import GoogleSearch
-
-params = {
-  "api_key": "<add_api_key_here",
-  "engine": "google_scholar",
-  "q": "Coffee",
-  "hl": "en"
-}
-
-search = GoogleSearch(params)
-results = search.get_dict()
-
-# code
 from serpapi import GoogleSearch
 
 import time
@@ -24,7 +10,7 @@ from urllib.request import urlopen
 # import json
 import json
 
-all_articles = pd.read_csv("all-aera-articles-feb-21-combined-reprocessed-proc.csv")
+all_articles = pd.read_csv("<add API key from serpAPI here>")
 all_articles['unique_row_id'] = all_articles['index']
 all_articles = all_articles.loc[1501:3054]
 all_articles
@@ -148,4 +134,4 @@ for my_index in all_articles.index:
       print('ERROR in accessing first resource: ' + str(e))
 
 
-df.to_csv("feb-21-2023-1500-3055.csv")
+df.to_csv("output-file.csv")
