@@ -28,22 +28,11 @@ for my_index in all_articles.index:
     year = all_articles[all_articles.index == my_index]['year'][my_index]
     unique_row_id = all_articles[all_articles.index == my_index]['unique_row_id'][my_index]
     
-    print(article_name)
-    print(journal_name)
-    
-    # print(article_name + journal_name + str(year))
-  
-    # for testing
-    # article_name = 'Seeing Potential: The Effects of Student-Teacher Demographic Congruence on Teacher Expectations and Recommendations'
-    # year = 2016
-    
     params = {
       "api_key": "<add API key from serpAPI here>",
       "device": "desktop",
       "engine": "google_scholar",
       "q": article_name,
-      # "as_ylo": year - 2,
-      # "as_yhi": year + 2,
       "hl": "en"
     }
     
