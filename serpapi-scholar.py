@@ -10,7 +10,7 @@ from urllib.request import urlopen
 # import json
 import json
 
-all_articles = pd.read_csv("<add API key from serpAPI here>")
+all_articles = pd.read_csv("<add-input-file-path-with-journal-titles-journal-names-and-years-here>")
 all_articles['unique_row_id'] = all_articles['index']
 all_articles = all_articles.loc[1501:3054]
 all_articles
@@ -38,7 +38,7 @@ for my_index in all_articles.index:
     # year = 2016
     
     params = {
-      "api_key": "6353c703629be97190577a805b97fd42f0d5c57577c2ff0d8dec3e3461c82c62",
+      "api_key": "<add API key from serpAPI here>",
       "device": "desktop",
       "engine": "google_scholar",
       "q": article_name,
